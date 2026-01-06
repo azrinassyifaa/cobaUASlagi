@@ -1,0 +1,35 @@
+START
+DECLARE array namaMobil
+DECLARE array hargaMobil
+DECLARE pilihan, jumlahMobil
+
+DO
+    DISPLAY menu
+    INPUT pilihan
+
+    IF pilihan == 1 THEN
+        INPUT jumlahMobil
+        FOR i ← 1 TO jumlahMobil
+            INPUT namaMobil[i]
+            INPUT hargaMobil dalam bentuk string
+            HAPUS tanda titik/koma pada hargaMobil
+            KONVERSI hargaMobil menjadi angka
+            SIMPAN ke array hargaMobil
+        END FOR
+
+    ELSE IF pilihan == 2 THEN
+        DISPLAY daftar mobil
+
+    ELSE IF pilihan == 3 THEN
+        INPUT kodeMobil dan jumlahBeli
+        HITUNG totalHarga
+        DISPLAY totalHarga
+
+    ELSE IF pilihan == 4 THEN
+        DISPLAY pesan keluar
+
+    ELSE
+        DISPLAY pesan error
+    END IF
+WHILE pilihan ≠ 4
+END
