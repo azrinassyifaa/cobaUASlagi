@@ -1,0 +1,31 @@
+Mulai
+    Deklarasi array merek[ ]
+    Deklarasi array suara[ ]
+    totalMerek ← 0
+
+    Input jumlahPemilih
+
+    Untuk i dari 1 sampai jumlahPemilih
+        Input merekMobil
+
+        ditemukan ← false
+        Untuk j dari 0 sampai totalMerek - 1
+            Jika merek[j] = merekMobil
+                suara[j] ← suara[j] + 1
+                ditemukan ← true
+                Keluar dari loop
+            EndIf
+        EndFor
+
+        Jika ditemukan = false
+            merek[totalMerek] ← merekMobil
+            suara[totalMerek] ← 1
+            totalMerek ← totalMerek + 1
+        EndIf
+    EndFor
+
+    Tampilkan "Hasil Voting"
+    Untuk i dari 0 sampai totalMerek - 1
+        Tampilkan merek[i] dan suara[i]
+    EndFor
+Selesai
